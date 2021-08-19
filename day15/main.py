@@ -37,7 +37,7 @@ def is_payment_accepted(drink_cost, payment):
 
 def serve_drink(ingredients, resources):
     for item in ingredients:
-        resources.update({item: resources[item] - ingredients[item]})
+        resources[item] -= ingredients[item]
     return resources
 
 
